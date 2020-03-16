@@ -44,12 +44,11 @@ app.get('/tests', (req, res) => {
 });
 
 function regression(res) {
-  let images = ['Próximos 7 días'];
   let ini_screen='/cypress/screenshots/e2e_todo.spec.js/Test todoist -- ';
 
-    var img1 = ini_screen+images[0]+'.png'
+    var img1 = ini_screen+'Próximos 7 días.png'
     //'/cypress/screenshots/e2e_todo.spec.js/Test todoist -- Bandeja de entrada (1).png';
-    var img2 = ini_screen+images[0]+' (1).png'
+    var img2 = ini_screen+'Próximos 7 días (1).png'
     //'/cypress/screenshots/e2e_todo.spec.js/Test todoist -- Bandeja de entrada.png';
     img1 = path.join(__dirname + img1);
     img2 = path.join(__dirname + img2);
