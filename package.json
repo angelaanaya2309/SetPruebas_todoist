@@ -1,0 +1,14 @@
+{
+   "scripts": {
+      "cy:open": "./node_modules/.bin/cypress open"
+   },
+   "dependencies": {
+      "cypress": "^4.1.0",
+      "express": "^4.17.1",
+      "fs": "0.0.1-security",
+      "mongodb": "^3.5.5",
+      "move-file": "^1.2.0",
+      "path": "^0.12.7",
+      "resemblejs": "^3.2.4"
+   }
+}
