@@ -46,11 +46,10 @@ app.get('/tests', (req, res) => {
 function regression(res) {
   let images = ['Próximos 7 días'];
   let ini_screen='/cypress/screenshots/e2e_todo.spec.js/Test todoist -- ';
-  var i;
-  for(i = 0; i < images.length; i++){
-    var img1 = ini_screen+images[i]+'.png'
+
+    var img1 = ini_screen+images[0]+'.png'
     //'/cypress/screenshots/e2e_todo.spec.js/Test todoist -- Bandeja de entrada (1).png';
-    var img2 = ini_screen+images[i]+' (1).png'
+    var img2 = ini_screen+images[0]+' (1).png'
     //'/cypress/screenshots/e2e_todo.spec.js/Test todoist -- Bandeja de entrada.png';
     img1 = path.join(__dirname + img1);
     img2 = path.join(__dirname + img2);
@@ -59,7 +58,6 @@ function regression(res) {
     .onComplete((data) => {
       fs.writeFile("./output.png", data.getBuffer(), () => {
         let currTime = new Date().getTime();
-        let tname= images[i];
         let nImg1 = currTime + ".png";
         let nImg2 = currTime + " (1).png";
         let rImg = currTime + "_result.png";
@@ -70,17 +68,15 @@ function regression(res) {
         fs.createReadStream("./output.png").pipe(fs.createWriteStream(fpth + rImg));
         let results = {
           date: currTime,
-          name: tname,
           image1: fpth2 + nImg1,
           image2: fpth2 + nImg2,
           resultImage: fpth2 + rImg,
           info: 'Missmatch percentage: ' + data.misMatchPercentage
         }
         saveResults(res, results);
-        console.log('saved::::::::::::: '+images[i]);
       });
     });
-  }
+  
 
 }
 
