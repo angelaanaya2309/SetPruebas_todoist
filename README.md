@@ -23,4 +23,4 @@ Realizar pruebas E2E y pruebas automatizadas de regresion con resemblejs.
 ## Reporte de pruebas
 Se realizaron 6 pruebas E2E exitosas con framework cypress y se utilizo resemblejs para realizar comparacion de imagenes de cada prueba.
 
-![](https://github.com/angelaanaya2309/SetPruebas_todoist/master/reporte/Captura.PNG)
+![](https://github.com/angelaanaya2309/SetPruebas_todoist/blob/master/reporte/Captura.PNG)
