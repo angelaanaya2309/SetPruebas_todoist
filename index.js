@@ -44,7 +44,7 @@ app.get('/tests', (req, res) => {
 });
 
 function regression(res) {
-  let images = ['Bandeja de entrada'];
+  let images = ['Próximos 7 días'];
   let ini_screen='/cypress/screenshots/e2e_todo.spec.js/Test todoist -- ';
   var i;
   for(i = 0; i < images.length; i++){
@@ -59,7 +59,7 @@ function regression(res) {
     .onComplete((data) => {
       fs.writeFile("./output.png", data.getBuffer(), () => {
         let currTime = new Date().getTime();
-        let tname=images[i];
+        let tname= images[i];
         let nImg1 = currTime + ".png";
         let nImg2 = currTime + " (1).png";
         let rImg = currTime + "_result.png";
